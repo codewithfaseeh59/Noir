@@ -5,7 +5,16 @@ function locoAnime() {
     scroll = new LocomotiveScroll({
         el: document.querySelector("#wrapper"),
         smooth: true,
-        multiplier: 0.8
+        multiplier: 0.8,
+        lerp: 0.08,
+        smartphone: {
+            smooth: true,
+            multiplier: 0.8,
+        },
+        tablet: {
+            smooth: true,
+            multiplier: 0.8
+        }
     });
 
     scroll.on("scroll", ScrollTrigger.update)

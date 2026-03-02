@@ -14,7 +14,6 @@ function showLoader() {
     const loaderBrand = document.querySelector('.loader-brand')
     const svgPath = document.querySelector('.loader-svg path')
 
-    // Current page detect karo
     const pageName = window.location.pathname.split('/').pop()
     const text = pageTexts[pageName] || 'Welcome to Noir'
     loaderText.textContent = text
