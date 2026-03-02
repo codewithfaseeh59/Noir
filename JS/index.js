@@ -1,9 +1,10 @@
-let scroll;
+let scroll
+
 function locoAnime() {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger)
 
     scroll = new LocomotiveScroll({
-        el: document.querySelector("#wrapper"),
+        el: document.querySelector('#wrapper'),
         smooth: true,
         multiplier: 0.8,
         lerp: 0.08,
@@ -13,28 +14,47 @@ function locoAnime() {
         },
         tablet: {
             smooth: true,
-            multiplier: 0.8
+            multiplier: 0.8,
         }
-    });
+    })
 
-    scroll.on("scroll", ScrollTrigger.update)
-    ScrollTrigger.scrollerProxy("#wrapper", {
+    scroll.on('scroll', ScrollTrigger.update)
+
+    ScrollTrigger.scrollerProxy('#wrapper', {
         scrollTop(value) {
-            return arguments.length ? scroll.scrollTo(value, 0, 0) : scroll.scroll.instance.scroll.y
+            return arguments.length
+                ? scroll.scrollTo(value, 0, 0)
+                : scroll.scroll.instance.scroll.y
         },
         getBoundingClientRect() {
             return {
-                top: 0,
-                left: 0,
+                top: 0, left: 0,
                 width: window.innerWidth,
                 height: window.innerHeight
             }
         },
-        pinType: document.querySelector("#wrapper").style.transform ? "transform" : "fixed"
+        pinType: document.querySelector('#wrapper').style.transform
+            ? 'transform'
+            : 'fixed'
     })
-    ScrollTrigger.addEventListener("refresh", () => scroll.update())
+
+    ScrollTrigger.addEventListener('refresh', () => scroll.update())
     ScrollTrigger.refresh()
-};
+}
+
+function navbarAnime() {
+    gsap.set('.navbar', { y: 100, opacity: 0 })
+    gsap.to('.navbar', {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        delay: 0.5,
+        ease: 'power4.out',
+        onComplete: () => {
+            gsap.set('.navbar', { clearProps: 'all' })
+        }
+    })
+}
 
 function navbarScroll() {
     const navbar = document.querySelector('.navbar')
@@ -54,19 +74,19 @@ function navbarScroll() {
 }
 
 function themeToggle() {
-
-    const toggle = document.querySelector(".theme-toggle")
+    const toggle = document.querySelector('.theme-toggle')
     const html = document.documentElement
-    const savedTheme = localStorage.getItem("theme")
+
+    const savedTheme = localStorage.getItem('theme')
     if (savedTheme) {
-        html.setAttribute("data-theme", savedTheme)
+        html.setAttribute('data-theme', savedTheme)
     }
 
-    toggle.addEventListener("click", () => {
-        const current = html.getAttribute("data-theme")
-        const newTheme = current === "dark" ? "light" : "dark"
-        html.setAttribute("data-theme", newTheme)
-        localStorage.setItem("theme", newTheme)
+    toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme')
+        const newTheme = current === 'dark' ? 'light' : 'dark'
+        html.setAttribute('data-theme', newTheme)
+        localStorage.setItem('theme', newTheme)
     })
 }
 
@@ -79,7 +99,6 @@ function hamburgerMenu() {
         navMenu.classList.toggle('menu-open')
 
         if (!navLinks.classList.contains('nav-open')) {
-
             navLinks.classList.add('nav-open')
             gsap.from(links, {
                 y: 60,
@@ -90,7 +109,6 @@ function hamburgerMenu() {
                 delay: 0.2
             })
         } else {
-
             navLinks.classList.add('nav-closing')
             setTimeout(() => {
                 navLinks.classList.remove('nav-open')
@@ -111,26 +129,9 @@ function hamburgerMenu() {
     })
 }
 
-function navbarAnime() {
-
-    gsap.set(".navbar", {
-        y: 100, opacity: 0
-    })
-    gsap.to(".navbar", {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 0.5,
-        ease: "power4.out",
-        onComplete: () => {
-            gsap.set(".navbar", {
-                clearProps: "all"
-            })
-        }
-    })
-}
-
 function heroAnime() {
+    if (!document.querySelector('.hero-heading')) return
+
     Splitting()
     const chars = document.querySelectorAll('.hero-heading .char')
 
@@ -164,101 +165,6 @@ function heroAnime() {
     })
 }
 
-function featuredAnime() {
-    gsap.from('.featured-heading', {
-        scrollTrigger: {
-            trigger: '.featured',
-            scroller: '#wrapper',
-            start: 'top 80%',
-        },
-        y: 60,
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
-    })
-
-    gsap.from('.featured-card', {
-        scrollTrigger: {
-            trigger: '.featured-grid',
-            scroller: '#wrapper',
-            start: 'top 80%',
-        },
-        y: 80,
-        opacity: 0,
-        duration: 0.8,
-        ease: 'power3.out',
-        stagger: 0.15
-    })
-}
-
-function lookbookAnime() {
-    gsap.from('.lookbook-heading', {
-        scrollTrigger: {
-            trigger: '.lookbook',
-            scroller: '#wrapper',
-            start: 'top 80%',
-        },
-        y: 60,
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
-    })
-
-    new Swiper('.lookbook-swiper', {
-        slidesPerView: 1.2,
-        spaceBetween: 20,
-        grabCursor: true,
-        loop: true,
-        pagination: {
-            el: '.lookbook-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            480: {
-                slidesPerView: 1.5,
-                spaceBetween: 20,
-            },
-            768: {
-                slidesPerView: 2.5,
-                spaceBetween: 24,
-            },
-            1024: {
-                slidesPerView: 3.2,
-                spaceBetween: 28,
-            }
-        }
-    })
-}
-
-function lookbookAnime() {
-    gsap.from(".lookbook-heading", {
-        scrollTrigger: {
-            trigger: ".lookbook",
-            scroller: "#wrapper",
-            start: "top 80%",
-        },
-
-        y: 60,
-        duration: 1,
-        ease: "power3.out",
-    })
-
-    gsap.from(".lookbook-card", {
-        scrollTrigger: {
-            trigger: ".lookbook-track",
-            scroller: "#wrapper",
-            start: "top 80%",
-        },
-
-        x: 80,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        stagger: 0.15,
-    })
-}
-
-
 function pageHeroAnime() {
     const pageHeroHeading = document.querySelector('.page-hero-heading')
     const pageHeroTag = document.querySelector('.page-hero-tag')
@@ -289,6 +195,92 @@ function pageHeroAnime() {
         delay: 0.6
     })
 }
+
+function featuredAnime() {
+    if (!document.querySelector('.featured')) return
+
+    gsap.from('.featured-heading', {
+        scrollTrigger: {
+            trigger: '.featured',
+            scroller: '#wrapper',
+            start: 'top 80%',
+        },
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+    })
+
+    gsap.from('.featured-card', {
+        scrollTrigger: {
+            trigger: '.featured-grid',
+            scroller: '#wrapper',
+            start: 'top 80%',
+        },
+        y: 80,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+        stagger: 0.15
+    })
+}
+
+function statementAnime() {
+    if (!document.querySelector('.statement')) return
+
+    gsap.from('.statement-heading', {
+        scrollTrigger: {
+            trigger: '.statement',
+            scroller: '#wrapper',
+            start: 'top 70%',
+        },
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+    })
+
+    gsap.to('.statement-bg img', {
+        scrollTrigger: {
+            trigger: '.statement',
+            scroller: '#wrapper',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true
+        },
+        y: -80,
+        ease: 'none'
+    })
+}
+
+function lookbookAnime() {
+    if (!document.querySelector('.lookbook')) return
+
+    gsap.from('.lookbook-heading', {
+        scrollTrigger: {
+            trigger: '.lookbook',
+            scroller: '#wrapper',
+            start: 'top 80%',
+        },
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+    })
+
+    new Swiper('.lookbook-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        grabCursor: true,
+        loop: true,
+        freeMode: true,
+        pagination: {
+            el: '.lookbook-pagination',
+            clickable: true,
+        }
+    })
+}
+
 
 function aboutAnime() {
     if (!document.querySelector('.brand-story')) return
@@ -475,7 +467,6 @@ function servicesAnime() {
     })
 }
 
-
 function contactAnime() {
     if (!document.querySelector('.contact-section')) return
 
@@ -555,29 +546,16 @@ Shery.makeMagnet('.nav-logo, .hero-btn, .statement-btn, .service-btn, .story-btn
     duration: 1
 })
 
-
-new Swiper('.lookbook-swiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 20,
-    grabCursor: true,
-    loop: true,
-    freeMode: true,
-    pagination: {
-        el: '.lookbook-pagination',
-        clickable: true,
-    }
-})
-
-
-locoAnime();
-navbarAnime();
-themeToggle();
-hamburgerMenu();
-heroAnime();
-pageHeroAnime();
-featuredAnime();
-statementAnime();
-lookbookAnime();
-aboutAnime();
-servicesAnime();
-contactAnime();
+locoAnime()
+navbarAnime()
+navbarScroll()
+themeToggle()
+hamburgerMenu()
+heroAnime()
+pageHeroAnime()
+featuredAnime()
+statementAnime()
+lookbookAnime()
+aboutAnime()
+servicesAnime()
+contactAnime()
