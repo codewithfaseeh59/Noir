@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noir — CodeWithFaseeh</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css">
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-svg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path
+                        d="M383.8 512l-95.1 0-108.2-154.5 0 91.1-86.4 63.4-97.7 0 0-482.2 40.5-29.8 108 0 123.7 176.1 0-112.7 86.4-63.4 97.7 0 0 461.5-68.9 50.5zM7.2 35.3l0 460.7 72-52.9 0-249.1 215.5 307.6 84.8 0 52.4-38.2-78.3 0-316.1-450.5-30.2 22.3zM89.7 501.9l80-58.8 0-101-79.8-114.4 0 220.9-72.6 53.3 72.3 0 0 0zM49 10.8l310.6 442.6 82.4 0 0-442.6-79.8 0 0 317.6-222.9-317.6-90.3 0zM279.4 191.6l72 102.8 0-278.5-72 53 0 122.7z" />
+                </svg>
+            </div>
+            <p class="loader-brand">NOIR</p>
+            <p class="loader-text">Welcome to Noir</p>
+        </div>
+    </div>
+
+    <div id="wrapper" data-barba="wrapper">
+
+        <header>
+            <nav class="navbar" id="navbar">
+                <div class="nav-logo">
+                    <a href="/index.html">Noir.</a>
+                </div>
+                <ul class="nav-links nav-left">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="./Pages/collections.html">Collections</a></li>
+                    <li><a href="./Pages/about.html">About</a></li>
+                    <li><a href="./Pages/services.html">Services</a></li>
+                    <li><a href="./Pages/contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-right">
+                    <div class="theme-toggle">
+                        <i class="ri-sun-fill sun-icon"></i>
+                        <i class="ri-moon-fill moon-icon"></i>
+                    </div>
+                    <div class="nav-menu">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main data-barba="container" data-barba-namespace="home">
+            <section class="hero" id="hero">
+                <div class="hero-bg">
+                    <img src="./Assets/Images/Hero-Section/hero-bg.jpg" alt="Hero-Image">
+                </div>
+                <div class="hero-content">
+                    <p class="hero-tag">New Collection 2026</p>
+                    <h1 class="hero-heading" data-splitting>
+                        <span class="line">Redefine</span>
+                        <span class="line">Your <em>Style</em></span>
+                    </h1>
+                    <a class="hero-btn" href="./Pages/collections.html">Explore Collection</a>
+                </div>
+            </section>
+            <section class="marquee" id="marquee">
+                <div class="marquee-track">
+                    <div class="marquee-content">
+                        <span>New Collection</span>
+                        <span class="divider"></span>
+                        <span>Luxury Fashion</span>
+                        <span class="divider"></span>
+                        <span>Noir 2026</span>
+                        <span class="divider"></span>
+                        <span>Redefine Style</span>
+                        <span class="divider"></span>
+                        <span>Elegance</span>
+                        <span class="divider"></span>
+                        <span>New Collection</span>
+                        <span class="divider"></span>
+                        <span>Luxury Fashion</span>
+                        <span class="divider"></span>
+                        <span>Noir 2026</span>
+                        <span class="divider"></span>
+                        <span>Redefine Style</span>
+                        <span class="divider"></span>
+                        <span>Elegance</span>
+                        <span class="divider"></span>
+                    </div>
+                    <div class="marquee-content">
+                        <span>New Collection</span>
+                        <span class="divider"></span>
+                        <span>Luxury Fashion</span>
+                        <span class="divider"></span>
+                        <span>Noir 2026</span>
+                        <span class="divider"></span>
+                        <span>Redefine Style</span>
+                        <span class="divider"></span>
+                        <span>Elegance</span>
+                        <span class="divider"></span>
+                        <span>New Collection</span>
+                        <span class="divider"></span>
+                        <span>Luxury Fashion</span>
+                        <span class="divider"></span>
+                        <span>Noir 2026</span>
+                        <span class="divider"></span>
+                        <span>Redefine Style</span>
+                        <span class="divider"></span>
+                        <span>Elegance</span>
+                        <span class="divider"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="featured" id="featured">
+                <div class="featured-top">
+                    <p class="featured-tag">— Featured</p>
+                    <h2 class="featured-heading">New <em>Arrivals</em></h2>
+                    <a class="featured-link" href="./Pages/collections.html">View All</a>
+                </div>
+                <div class="featured-grid">
+                    <div class="featured-card">
+                        <div class="featured-image">
+                            <img src="./Assets/Images/Collection-Section/evening-wear.jpg" alt="Product-1">
+                            <div class="featured-overlay">
+                                <h3>Classic Noir</h3>
+                                <p>Evening Wear</p>
+                                <span>$299</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-card">
+                        <div class="featured-image">
+                            <img src="./Assets/Images/Collection-Section/casual-wear.jpg" alt="Product-2">
+                            <div class="featured-overlay">
+                                <h3>Shadow Drape</h3>
+                                <p>Casual Wear</p>
+                                <span>$199</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-card">
+                        <div class="featured-image">
+                            <img src="./Assets/Images/Collection-Section/luxury-wear.jpg" alt="Product-3">
+                            <div class="featured-overlay">
+                                <h3>Velvet Touch</h3>
+                                <p>Luxury Wear</p>
+                                <span>$399</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-card">
+                        <div class="featured-image">
+                            <img src="./Assets/Images/Collection-Section/street-wear.jpg" alt="Product-4">
+                            <div class="featured-overlay">
+                                <h3>Minimal Edge</h3>
+                                <p>Street Wear</p>
+                                <span>$249</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="statement" id="statement">
+                <div class="statement-bg">
+                    <img src="./Assets/Images/Statement-Section/statement-bg.jpg" alt="Noir Statement">
+                </div>
+                <div class="statement-content">
+                    <p class="statement-tag">— Our Philosophy</p>
+                    <h2 class="statement-heading">
+                        Fashion is not just
+                        <em>clothing,</em>
+                        it's an attitude
+                    </h2>
+                    <a class="statement-btn" href="./Pages/about.html">Our Story</a>
+                </div>
+            </section>
+            <section class="lookbook" id="lookbook">
+                <div class="lookbook-top">
+                    <p class="lookbook-tag">— Lookbook</p>
+                    <h2 class="lookbook-heading">Latest <em>Looks</em></h2>
+                </div>
+                <div class="swiper lookbook-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide lookbook-card">
+                            <div class="lookbook-image">
+                                <img src="./Assets/Images/Lookbook-Section/look-1.jpg" alt="Look 1">
+                            </div>
+                        </div>
+                        <div class="swiper-slide lookbook-card">
+                            <div class="lookbook-image">
+                                <img src="./Assets/Images/Lookbook-Section/look-2.jpg" alt="Look 2">
+                            </div>
+                        </div>
+                        <div class="swiper-slide lookbook-card">
+                            <div class="lookbook-image">
+                                <img src="./Assets/Images/Lookbook-Section/look-3.jpg" alt="Look 3">
+                            </div>
+                        </div>
+                        <div class="swiper-slide lookbook-card">
+                            <div class="lookbook-image">
+                                <img src="./Assets/Images/Lookbook-Section/look-4.jpg" alt="Look 4">
+                            </div>
+                        </div>
+                        <div class="swiper-slide lookbook-card">
+                            <div class="lookbook-image">
+                                <img src="./Assets/Images/Lookbook-Section/look-5.jpg" alt="Look 5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination lookbook-pagination"></div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="/index.html">Noir.</a>
+                    <p class="footer-tagline">Redefing fashion,<br>one collection at a time.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="./Pages/collections.html">Collections</a></li>
+                        <li><a href="./Pages/about.html">About</a></li>
+                        <li><a href="./Pages/services.html">Services</a></li>
+                        <li><a href="./Pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get latest collection updates.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button class="newsletter-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Noir. All rights reserved.</p>
+                <div class="footer-social-icons">
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./JS/index.js"></script>
+    <script src="./JS/loader.js"></script>
+</body>
+
+</html>

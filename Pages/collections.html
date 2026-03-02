@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections — Noir</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css">
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/pages.css">
+</head>
+
+<body>
+    <div id="wrapper" data-barba="wrapper">
+
+        <header>
+            <nav class="navbar" id="navbar">
+                <div class="nav-logo">
+                    <a href="../index.html">Noir.</a>
+                </div>
+                <ul class="nav-links nav-left">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./collections.html">Collections</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-right">
+                    <div class="theme-toggle">
+                        <i class="ri-sun-fill sun-icon"></i>
+                        <i class="ri-moon-fill moon-icon"></i>
+                    </div>
+                    <div class="nav-menu">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main data-barba="container" data-barba-namespace="collections">
+            <section class="page-hero" id="page-hero">
+                <div class="page-hero-bg">
+                    <img src="../Assets/Images/Collection-Page/hero-page-bg.jpg" alt="Collections">
+                </div>
+                <div class="page-hero-content">
+                    <p class="page-hero-tag">— Explore</p>
+                    <h1 class="page-hero-heading" data-splitting>Our <em>Collections</em></h1>
+                </div>
+            </section>
+            <section class="collections-control">
+                <div class="controls-left">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search Collections...">
+                    </div>
+                </div>
+                <div class="controls-right">
+                    <div class="filter-btns">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="evening">Evening</button>
+                        <button class="filter-btn" data-filter="casual">Casual</button>
+                        <button class="filter-btn" data-filter="luxury">Luxury</button>
+                        <button class="filter-btn" data-filter="street">Street</button>
+                    </div>
+                    <div class="sort-select">
+                        <select>
+                            <option value="default">Sort By</option>
+                            <option value="low-high">Price: Low to High</option>
+                            <option value="high-low">Price: High to Low</option>
+                            <option value="newest">Newest</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="collections">
+                <div class="collections-grid">
+                    <div class="collection-card" data-category="evening">
+                        <div class="collection-image">
+                            <img src="../Assets/Images/Collection-Page/evening-1.jpg" alt="Product">
+                            <div class="collection-overlay">
+                                <h3>Classic Noir</h3>
+                                <p>Evening Wear</p>
+                                <span>$299</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection-card" data-category="casual">
+                        <div class="collection-image">
+                            <img src="../Assets/Images/Collection-Page/casual-1.jpg" alt="Product">
+                            <div class="collection-overlay">
+                                <h3>Shadow Drape</h3>
+                                <p>Casual Wear</p>
+                                <span>$199</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection-card" data-category="luxury">
+                        <div class="collection-image">
+                            <img src="../Assets/Images/Collection-Page/luxury-1.jpg" alt="Product">
+                            <div class="collection-overlay">
+                                <h3>Velvet Touch</h3>
+                                <p>Luxury Wear</p>
+                                <span>$399</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection-card" data-category="street">
+                        <div class="collection-image">
+                            <img src="../Assets/Images/Collection-Page/street-1.jpg" alt="Product">
+                            <div class="collection-overlay">
+                                <h3>Minimal Edge</h3>
+                                <p>Street Wear</p>
+                                <span>$249</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection-card" data-category="evening">
+                        <div class="collection-image">
+                            <img src="../Assets/Images/Collection-Page/evening-2.jpg" alt="Product">
+                            <div class="collection-overlay">
+                                <h3>Dark Elegence</h3>
+                                <p>Evening Wear</p>
+                                <span>$349</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection-card" data-category="casual">
+                        <div class="collection-image">
+                            <img src="../Assets/Images/Collection-Page/casual-2.jpg" alt="Product">
+                            <div class="collection-overlay">
+                                <h3>Urban Flow</h3>
+                                <p>Casual Wear</p>
+                                <span>$179</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection-card" data-category="luxury">
+                        <div class="collection-image">
+                            <img src="../Assets/Images/Collection-Page/luxury-2.jpg" alt="Product">
+                            <div class="collection-overlay">
+                                <h3>Noir Luxe</h3>
+                                <p>Luxury Wear</p>
+                                <span>$499</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection-card" data-category="street">
+                        <div class="collection-image">
+                            <img src="../Assets/Images/Collection-Page/street-2.jpg" alt="Product">
+                            <div class="collection-overlay">
+                                <h3>Street Soul</h3>
+                                <p>Street Wear</p>
+                                <span>$229</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="/index.html">Noir.</a>
+                    <p class="footer-tagline">Redefing fashion,<br>one collection at a time.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="./collections.html">Collections</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get latest collection updates.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button class="newsletter-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Noir. All rights reserved.</p>
+                <div class="footer-social-icons">
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../JS/index.js"></script>
+    <script src="../JS/collections.js"></script>
+    <script src="../JS/loader.js"></script>
+
+</body>
+
+</html>
