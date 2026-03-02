@@ -6,7 +6,7 @@ A modern, dark-themed fashion brand website built with vanilla HTML, CSS, and Ja
 
 ## 🚀 Live Demo
 
-> Deploy link here
+https://codewithfaseeh59.github.io/Noir/
 
 ---
 
@@ -123,7 +123,7 @@ Noir/
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/Noir.git
+git clone https://github.com/codewithfaseeh59/Noir.git
 
 # Open in VS Code
 code Noir
